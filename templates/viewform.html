@@ -1,0 +1,41 @@
+<form action="" method="POST"enctype="multipart/form-data">
+    {% csrf_token %}
+  <table border=2 >
+         
+    <h1>View</h1>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Username</th>
+            <th>Email</th>
+            
+        </tr>
+    </thead>
+
+    <tbody>
+         {% for d in data %}
+     <tr>
+      <td>{{d.name}}</td>
+      <td>{{d.location}}</td>
+      <td>{{d.age}}</td>
+      <td>{{d.gender}}</td>
+      <td>{{d.username}}</td>
+      <td>{{d.email}}</td>
+
+      <td>
+            <a href="update?username={{d.username}}">UPDATE</a>
+      </td>
+      
+     </tr>
+        {% endfor %}
+        
+    </tbody>
+
+ </body>  
+</table>
+</form>
+    
+    

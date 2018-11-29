@@ -1,0 +1,36 @@
+<form action="" method="POST">
+        {% csrf_token %}
+        <table>
+            <h1>Updation</h1>
+            <tr>
+                <td>Name</td>
+                <td><input type="text"  name="name" value="{{data.name}}"></td>
+            </tr>
+
+            <tr>
+                <td>Location</td>
+                <td><input type="text"  name="location" value="{{data.location}}"></td>
+            </tr>
+
+            <tr>
+                <td>Age</td>
+                <td><input type="text"  name="age" value="{{data.age}}"></td>
+            </tr>
+           
+            <tr>
+                    <td>Username</td>
+                    <td><input type="text"  name="username" value="{{data.username}}"></td>
+            </tr>
+            
+            <tr>
+                    <td>Email</td>
+                    <td><input type="text"  name="email" value="{{data.email}}"></td>
+            </tr>
+    
+
+           <tr>
+             <td> <button type="submit">Save</button></td>
+           </tr>
+
+        </table>
+    </form>
